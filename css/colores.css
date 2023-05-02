@@ -1,0 +1,66 @@
+
+body    {
+    background-color: Thistle;
+}
+.box    {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    color: rgb(0,0,0);
+    font-size: 1.8em;
+    margin-left: auto;
+
+}
+.nombrecolor1 {
+
+    background-color:HotPink ;
+    margin-right: 50px;
+}
+.nombrecolor2   {
+
+    background-color:MediumVioletRed ;
+    margin-right: 50px;
+}
+.nombrecolor3   {
+    background-color:MediumOrchid ;
+
+
+
+}
+
+
+
+.nombrecolor4   {
+    background-color: rgb(32, 178, 170);
+    margin-right: 50px;
+}
+.nombrecolor5   {
+
+    background-color: rgb(0, 128, 128);
+    margin-right: 50px;
+}
+.nombrecolor6   {
+    background-color:rgb(0, 206, 209) ;
+
+
+}
+
+
+
+.nombrecolor7   {
+
+    background-color:#00BFFF ;
+    margin-right: 50px;
+}
+.nombrecolor8   {
+
+    background-color: #7B68EE;
+    margin-right: 50px;
+}
+.nombrecolor9   {
+
+    background-color:#B0C4DE ;
+    
+}
+}                                                                   
