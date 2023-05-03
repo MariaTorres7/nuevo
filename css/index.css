@@ -1,7 +1,7 @@
 .boton {
-    border: 1px solid #490a27; /*anchura, estilo y color borde*/
+    border: 1px solid #af3285; /*anchura, estilo y color borde*/
     padding: 10px; /*espacio alrededor texto*/
-    background-color: #63194a; /*color botón*/
+    background-color: #8d256a; /*color botón*/
     color: #ffffff; /*color texto*/
     text-decoration: none; /*decoración texto*/
     text-transform: uppercase; /*capitalización texto*/
