@@ -11,3 +11,4 @@ else {
     mainMenu.classList.add("main-menu") 
 }
 });
+
