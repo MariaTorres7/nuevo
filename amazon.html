@@ -4,47 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon</title>
-    <link rel="stylesheet" href="./css/amazon.css">
+    <link rel="stylesheet" href="css/amazon.css">
     <link rel="stylesheet" href="icons/all.css">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> -->
+    <link rel="shortcut icon" href="./img/amazonL.jfif" type="image/x-icon">
 </head>
 <body>
-   <div id="navbar">
-       <h1><img src="img/amazon.png" alt=""><a href="https://www.google.com/maps/place/Colombia/@4.6365857,-79.6344677,6z/data=!3m1!4b1!4m6!3m5!1s0x8e15a43aae1594a3:0x9a0d9a04eff2a340!8m2!3d4.570868!4d-74.297333!16zL20vMDFsczI?entry=ttu"><img src="img/envio.png" alt=""></a>
-        </h1>
-        <div class="busqueda">
-       <select  id="">
-        <option value="a">Todos</option>
-        <option value="s"></option>
-       </select>
-       <input type="text" class="barra">
-       <button class="lipa"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <header>
+        <!-- contenedor logo,icono ubicacion ,destino -->
+        <div class="logo "></div>
+        <div class="ubicacion">
+            <div class="icono-ubicacion"><i class="fa-solid fa-location-dot fa-beat"></i></div>
+            <div class="enviar">Enviar a</div>
+            <div class="pais"><b>Colombia</b></div>  
         </div>
-       <ul>
-           <li><a href="#">Inicio</a></li>
-           <li><a href="#">Productos</a></li>
-           <li><a href="#">Ofertas</a></li>
-           <li><a href="#">Prime</a></li>
-           <li><a href="#"><div>
-                              <span>0</span>
-                              <span ><i class="fa-light fa-cart-shopping"></i></span>
-                            </div>
-                            <div>
-                              <span>
-                                Carrito
-                              </span>
-                            </div></li>
-       </ul>
-   </div>
-    <div id="mainConten" class="ventas"></div>
-<div class="img1 inmg"><img src="img/amazon1.jpg" alt=""></div>
-<!-- <div class="img2 inmg"><img src="img/amazon2.jpg" alt=""></div>
-<div class="img3 inmg"><img src="img/amazon3.jpg" alt=""></div>
-<div class="img4 inmg"><img src="img/amazon4.jpg" alt=""></div>
-<div class="img5 inmg"><img src="img/amazon5.jpg" alt=""></div> -->
+        <!-- contenedor input , search,select -->
+        <div id="boxHeaderSearchInput" class="content-busqueda">
+            <select class="header-search-input" id="headerSearchInput"><option value="">Todos</option></select>
+            <input type="text" class="input_buscador" placeholder="Buscar Amazon">
+            <button class="icon-busqueda"><i class="search fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- contenedor Bandera , idioma,  -->
+        <div class="idioma">
+            <img class="bandera" src="./img/usa.png" alt="">
+            <div class="lengua"><b>ES</b></div>
+        </div>
+        <!-- contenedor saludo,cuenta  -->
+        <div class="hola">
+            <div class="saludo">Hola, identifícate</div>
+            <div class="cuenta"><b>Cuenta y listas</b></div>
+        </div>
+        <!-- contenedor textos devoluciones, pedidos  -->
+        <div class="reembolso">
+            <div class="retornar">Devoluciones</div>
+            <div class="orden"><b>Y pedidos</b></div>
+        </div>
+        <!-- contenedor icono carrito texto carrito  -->
+        <div class="carrito">
+            <div class="i-carrito"><i class="icon fa-solid fa-cart-shopping fa-beat"></i></div>
+            <div class=" letra l-carrito"><b>Carrito</b></div>
+        </div>
+    </header>
+    <div class="barra">
+        <div class="c-menu">
+          <div class="i-hambu"><i class="icon fa-solid fa-bars fa-fade"></i></div>
+          <div class="letra t-todo">Todo</div>
+       </div> 
+       <div class="ofert">
+        <div class="letra  t-oferta">oferta</div>
+       </div>
+    </div>
+    <!-- cuerpo del trabajo -->
 
-    <script src="javascript/amazon.js"></script>
 
-    
+    <!-- aqui comienza el modal -->
+  <div id="main-content" class="main-content"></div> 
+        <div class="box-modal">
+            <div class="modal">
+            <div class="btn-close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="box-main-img-modal">
+                <img class="img-modal" src="img/prinamazon.jpg" alt="balon">
+            </div>
+            <div class="info-modal"><span>
+              The Woobles Easy Peasy - Kit de ganchillo para principiantes (pingüino, pollito, zorro y conejo) con hilo fácil - Kit de tejer de ganchillo todo en uno - Paquete de kit de ganchillo para principiantes con tutoriales en video paso a paso</span></div>
+
+       <div class="divs">
+        
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon1.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon2.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon3.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon4.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon5.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon6.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon7.jpg" alt=""></div>
+        <div class="divMiniaturas "><img class="balon" src="./img/amazon8.jpg" alt=""></div>
+    </div>  
+    <!-- este fue el modal -->
+    <script src="./js/amazon.js"></script>
 </body>
 </html>
