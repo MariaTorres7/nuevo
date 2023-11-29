@@ -3,82 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon</title>
+    <title> Amazon</title>
     <link rel="stylesheet" href="css/amazon.css">
     <link rel="stylesheet" href="icons/all.css">
-    <link rel="shortcut icon" href="./img/amazonL.jfif" type="image/x-icon">
+    
 </head>
 <body>
+    
     <header>
-        <!-- contenedor logo,icono ubicacion ,destino -->
-        <div class="logo "></div>
-        <div class="ubicacion">
-            <div class="icono-ubicacion"><i class="fa-solid fa-location-dot fa-beat"></i></div>
-            <div class="enviar">Enviar a</div>
-            <div class="pais"><b>Colombia</b></div>  
+        <div class="header-logo">
+            <img class="img-main-logo" src="img/amazon.png" alt="">
         </div>
-        <!-- contenedor input , search,select -->
-        <div id="boxHeaderSearchInput" class="content-busqueda">
-            <select class="header-search-input" id="headerSearchInput"><option value="">Todos</option></select>
-            <input type="text" class="input_buscador" placeholder="Buscar Amazon">
-            <button class="icon-busqueda"><i class="search fa-solid fa-magnifying-glass"></i></button>
+        <div class="header-enviar-a">
+            <div class="box-icon-location">
+                <i class="icon-location fa-solid fa-location-dot"></i>
+            </div>
+            <div class="box-texto-enviar-a">
+                <span class="texto-enviar-a"> Enviar a </span>
+            </div>
+            <div class="box-texto-colombia">
+                <span class="texto-colombia"> Colombia </span>
+            </div>
         </div>
-        <!-- contenedor Bandera , idioma,  -->
-        <div class="idioma">
-            <img class="bandera" src="./img/usa.png" alt="">
-            <div class="lengua"><b>ES</b></div>
+        <div class="box-header-search-input">
+            <div class="header-search-input">
+                <div class="box-filtro-todos">
+                    <div class="filtro-todos">
+                        <span class="header-todos"> Todos </span>
+                        <i class="icon-chevron fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="box-buscar-amazon">
+                    <div class="buscar-amazon">
+                        <input class="input-busqueda" type="text" placeholder="Buscar Amazon">
+                    </div>
+                </div>
+                <div class="box-lupa">
+                    <div class="lupa">
+                        <i class="icon-lupa fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- contenedor saludo,cuenta  -->
-        <div class="hola">
-            <div class="saludo">Hola, identifícate</div>
-            <div class="cuenta"><b>Cuenta y listas</b></div>
+        <div class="header-flag-country">
+            <div class="box-flag">
+                <img class="flag-usa" src="img/usa.png" alt="">
+                <span class="idioma"> ES </span>
+                <i class="icon-chevron-idioma fa-solid fa-chevron-down"></i>
+            </div>
         </div>
-        <!-- contenedor textos devoluciones, pedidos  -->
-        <div class="reembolso">
-            <div class="retornar">Devoluciones</div>
-            <div class="orden"><b>Y pedidos</b></div>
+
+        <div class="header-identificate">
+            <span class="txt-hola-identificate"> Hola, identifícate</span><br>
+            <span class="txt-cuenta-listas"> Cuenta y Listas </span>
+            <i class="icon-chevron-identificate fa-solid fa-chevron-down"></i>
         </div>
-        <!-- contenedor icono carrito texto carrito  -->
-        <div class="carrito">
-            <div class="i-carrito"><i class="icon fa-solid fa-cart-shopping fa-beat"></i></div>
-            <div class=" letra l-carrito"><b>Carrito</b></div>
+        <div class="header-devoluciones">
+            <span class="txt-devoluciones"> Devoluciones </span>
+            <span class="txt-pedidos"> y Pedidos </span>
+        </div>
+        <div class="header-carrito">
+            <div class="box-carrito">
+                <i class="icon-carrito fa-solid fa-cart-shopping"></i>
+                <span class="txt-carrito"> carrito </span>
+            </div>
         </div>
     </header>
-    <div class="barra">
-        <div class="c-menu">
-          <div class="i-hambu"><i class="icon fa-solid fa-bars fa-fade"></i></div>
-          <div class="letra t-todo">Todo</div>
-       </div> 
-       <div class="ofert">
-        <div class="letra  t-oferta">oferta</div>
-       </div>
-    </div>
-    <!-- cuerpo del trabajo -->
+    <nav class="barra-navegacion">
+        <ul class="items-menu">
+            <li class="items"> <i class="menu-hamburguesa fa-solid fa-bars"></i> Todo </li>
+            <li class="items"> Ofertas del Día </li>
+            <li class="items"> Listas </li>
+            <li class="items"> Servicio al Cliente </li>
+            <li class="items"> Tarjetas de Regalo </li>
+            <li class="items"> Vender </li>
+        </ul>
+    </nav>
 
-
-    <!-- aqui comienza el modal -->
-  <div id="main-content" class="main-content"></div> 
-        <div class="box-modal">
-            <div class="modal">
-            <div class="btn-close"><i class="fa-solid fa-xmark"></i></div>
-            <div class="box-main-img-modal">
-                <img class="img-modal" src="img/prinamazon.jpg" alt="balon">
+    <!-- PRIMERA PANTALLA DE RESULTADOS -->
+    <div id="resultados">
+        <div class="filtro">
+            <div class="txtFiltro">
+                <span> 1 a 48 de más de 50,000 resultados para</span><span class="pc">"crochet"
+               
             </div>
-            <div class="info-modal"><span>
-              The Woobles Easy Peasy - Kit de ganchillo para principiantes (pingüino, pollito, zorro y conejo) con hilo fácil - Kit de tejer de ganchillo todo en uno - Paquete de kit de ganchillo para principiantes con tutoriales en video paso a paso</span></div>
+            <div class="iconFiltro">
+                <span> Ordenar por: Destacados </span><i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="mainContent">
+            <div class="clasificar">
+                <span class="txtFil">FILTROS USADOS RECIENTEMENTE</span><br>
+                <input type="checkbox"> <span class="txtPrincipalAll">Elegible para Envío Gratis</span>
 
-       <div class="divs">
-        
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon1.jpg" alt=""></div>
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon2.jpg" alt=""></div>
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon3.jpg" alt=""></div>
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon4.jpg" alt=""></div>
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon5.jpg" alt=""></div>
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon6.jpg" alt=""></div>
-        <div class="divMiniaturas "><img class="balon" src="./img/amazon7.jpg" alt=""></div>
-        <!-- <div class="divMiniaturas "><img class="balon" src="./img/amazon8.jpg" alt=""></div> -->
-    </div>  
-    <!-- este fue el modal -->
-    <script src="./js/amazon.js"></script>
+                <hr>
+
+                <span class="txtPrincipalBold">Envío Gratis por Amazon</span><br>
+                <input type="checkbox"><span class="txtPrincipalAll">Elegible para Envío Gratis</span><br>
+
+                <span class="txtPrincipalBold">Productos más Sustentables</span><br>
+                <input type="checkbox"><span class="txtPrincipalAll">Climate Pledge Friendly</span><br>
+
+                <span class="txtPrincipalBold">Reseña del Cliente</span><br>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-regular fa-star"></i><span class="mas"> o más </span><br>
+
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-regular fa-star"></i>
+                <i class="start fa-regular fa-star"></i><span class="mas"> o más</span><br>
+
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-regular fa-star"></i>
+                <i class="start fa-regular fa-star"></i>
+                <i class="start fa-regular fa-star"></i><span class="mas"> o más </span><br>
+
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-regular fa-star"></i>
+                <i class="start fa-regular fa-star"></i>
+                <i class="start fa-regular fa-star"></i>
+                <i class="start fa-regular fa-star"></i><span class="mas"> o más </span>
+            </div>
+            <div class="boxImgProducto">
+                <span class="txtResult"> Resultados </span><br>
+                
+                <div class="imgProducto">
+                    <img onclick="ir()" class="imgPri" src="img/amazon1.jpg" alt="">
+                </div>
+                
+            </div>
+            <div class="txtProductoPrincipal">
+                <!-- <span class="patro">Patrocinado <i class="exclaim fa-solid fa-circle-exclamation"></i></span><br> -->
+                <span class="spanTxt">The Woobles Kit de ganchillo para principiantes con hilo Easy Peasy como se ve en Shark Tank,</span>
+                <br>
+                <span> con tutoriales en video paso a paso - Pierre The Penguin</span>
+                <br>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-solid fa-star"></i>
+                <i class="start fa-regular fa-star"></i> <i class="fa-solid fa-chevron-down"></i>
+                <br>
+
+                <span class="us">us$</span><span class="preci">34</span><span class="preciPeque">99</span><br>
+                <span class="txtGeneralInfo">Entrega el <span class="entrega">lun, 18 de dic </span> a Colombia </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="todo" class="todo">
+        <!-- PUBLICIDAD QUE APARECE EN LA PARTE SUPERIOR -->
+        <div id="principal" class="principal">
+                <div class="infoProductoTop">
+                <div class="imgProductoTop">
+                    <div class="img">
+                        <img class="imgTop" src="img/amazon2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="txtProductoTop">
+                    <div class="txt">
+                        <span>HonKuaDL Kit de ganchillo para adultos principales, kit de ganchillo para niños principiantes,</span><br>
+                        <span>kit de tejido de ganchillo con tutoriales en video paso a paso e hilo, gancho, cadena de metal,...</span>
+                    </div>
+                </div>
+                <div class="calificaciones">
+                    <div class="estrellas">
+                        <i class="start fa-solid fa-star"></i>
+                        <i class="start fa-solid fa-star"></i>
+                        <i class="start fa-solid fa-star"></i>
+                        <i class="start fa-solid fa-star"></i>
+                        <i class="start fa-regular fa-star"></i>
+                        <span class="unidadCalificaciones">2,712</span>
+                    </div>
+                </div>
+                <div class="precio">
+                    <span class="peso"> $ </span>
+                    <span class="precioOfi"> 19 </span>
+                    <span class="precioPeque"> 99 </span>
+                </div>
+                <div class="prime">
+                    <i class="icon-prime fa-solid fa-check"></i>
+                    <span class="txtPrime"> prime </span>
+                </div>
+            </div>
+            <div class="volverPatrocinador">
+                <div class="volver">
+                    <i class="chevron-left fa-solid fa-chevron-left"></i>
+                    <span class="volverResult" onclick="volverResults()"> Volver a resultados </span>
+                </div>
+                <div class="patrocinador">
+                    <span class="patro"> Patrocinado </span>
+                    <i class="exclaim fa-solid fa-circle-exclamation"></i>
+                </div>
+            </div>
+        </div>
+    
+        <!-- SEGUNDA PANTALLA LA CUAL PERMITE ABRIR EL MODAL -->
+        <div id="contenedor" class="contenedor">
+            <div class="imagenesPeque">
+                <div class="imags">
+                    <img id="image-1" class="imagesReducidas imgActive" src="img/amazon2.jpg" alt="">
+                    <img id="image-2" class="imagesReducidas" src="img/amazon3.jpg" alt="">
+                    <img id="image-3" class="imagesReducidas" src="img/amazon4.jpg" alt="">
+                    <img id="image-4" class="imagesReducidas" src="img/amazon5.jpg" alt="">
+                    <img id="image-5" class="imagesReducidas" src="img/amazon6.jpg" alt="">
+                </div>
+            </div>
+            <div class="producto">
+                <img id="imagePrincipal" class="img-zoom img-producto" onclick="abrir()" src="img/amazon7.jpg" data-zoom-image="img/amazon7.jpg" alt="">
+                <label style="font-size: .8em; color: gray;"> Pasa el mouse encima de la imagen para aplicar zoom  </label>
+            </div>
+            <div class="iconChevronTop">
+                <div class="iconArriba">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+            </div>
+            <div class="text-all">
+                <div class="textComputer">
+                    <p>The Woobles Kit de ganchillo para principiantes</p>  
+                        <p>con hilo Easy Peasy como se ve en Shark Tank,</p>
+                        <p>con tutoriales en video paso a paso.</p>
+                </div>
+                <div class="boxVisitas">
+                    <span class="visitas"> Visita la tienda de The Woobles </span>
+                </div>
+                <div class="caliRespuesta">
+                    <div class="boxCali">
+                        <span class="cali" id="cali"></span>
+                    </div>
+                    <div class="boxEstrellas">
+                        <span class="estrellas">
+                            <i class="start" id="start1"></i>
+                            <i class="start" id="start2"></i>
+                            <i class="start" id="start3"></i>
+                            <i class="start" id="start4"></i>
+                            <i class="start" id="start5"></i>
+                    </span>
+                    </div>
+                    <div class="boxIcon">
+                        <span class="iconChevronCali"> <i class="iconDetalles fa-solid fa-chevron-down"></i> </span>
+                    </div>
+                    <div class="boxTxtCali">
+                        <span class="txtCaliRespuesta"> 2,712 calificaciones</span>
+                    </div>
+                    <div class="boxBarra">
+                        <span class="barra"> | </span>
+                    </div>
+                
+                    <div class="boxRespuesta">
+                        <span class="txtCaliRespuesta"> 41 preguntas respondidas </span>
+                       
+                    </div>
+                   
+                     <span class="us">us$</span><span class="preci">34</span>
+                     <span class="preciPeque">99</span><br>
+                   
+                
+                </div>
+            </div>
+            <br>
+            <div class="box-info">
+                <div class="box">
+                    <div class="precioInfo">
+                        <span class="us"> US$ </span>
+                        <span class="preci">34 </span>
+                        <span class="preciPeque"> 99 </span>
+                    </div>
+                    <div class="txtGeneralInfo">
+                        <span class="detalles">Devoluciones GRATIS<i class="iconDetalles fa-solid fa-chevron-down"></i></span>
+                        <p>Sin cargos de importación y US$10.53 de envío a Colombia</p>
+                        <span class="detalles">Detalles<i class="iconDetalles fa-solid fa-chevron-down"></i></span>
+                        <p>Entrega GRATIS entre el 14 - 26 de diciembre a Colombia en pedidos elegibles de más de $35</p>
+                            <!-- Entrega el <span class="entrega"> viernes, 24 de noviembre </span> a Colombia </p><br>
+                        <p>O entrega más rápida el viernes, <span class="entrega"> 17 de noviembre. </span> Realiza el pedido en <span class="time"> 9 hrs 39 mins </span></p> -->
+                    </div>
+                    <div class="envios">
+                        <i class="locationEnvios fa-solid fa-location-dot"></i>
+                        <span class="enviar-a"> Enviar a Colombia </span>
+                    </div>
+                    <!-- <div class="disponible">
+                        <span class="uniDisponible"> Disponible </span>
+                    </div>
+                    <div class="cantidad">
+                        <span class="cantidadPro"> Cantidad:   1 </span>
+                        <i class="iconCantidad fa-solid fa-chevron-down"></i>
+                    </div> -->
+                    <div class="buttons">
+                        <button class="button-1"> Agregar al carrito </button>
+                        <button class="button-2"> Comprar ahora </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANTALLA DEL MODAL -->
+        <main id="box-modal">
+            <div class="modal" id="modal">
+                <div class="main-content">
+                    <div class="img-product">
+                        <div id="boxMainImg" class="box-main box-img-principal">
+                            <img id="img-principal" class="img-principal" src="img/amazon2.jpg" alt="" srcset="">
+                        </div>
+                        
+                    </div>
+                    <div class="box-all">
+                        <div class="info-product">
+                            <div class="box-text-product">
+                                <p> The Woobles Kit de ganchillo para principiantes con hilo Easy Peasy como se ve en Shark Tank, con tutoriales en video paso a paso - Pierre The Penguin </p>
+                            <br>
+                        <br></div>
+                        
+                        </div>
+                        <div id="imagenes" class="imagenes">
+                            
+                                <img id="img-1" class="img-reducidas active" src="img/amazon2.jpg" alt="">
+                                <img id="img-2" class="img-reducidas" src="img/amazon3.jpg" alt="">
+                                <img id="img-3" class="img-reducidas" src="img/amazon4.jpg" alt="">
+                                <img id="img-4" class="img-reducidas" src="img/amazon5.jpg" alt="">
+                                <img id="img-5" class="img-reducidas" src="img/amazon6.jpg" alt="">
+                                
+                           
+                        </div>
+                    </div>
+                    <div class="box-close">
+                        <div id="close" class="box-icon-close">
+                            <i class="icon-close fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+    
+
+    <script src="js/amazon.js"></script>
 </body>
 </html>

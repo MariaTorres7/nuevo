@@ -1,253 +1,825 @@
 *{
-    padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
 }
-header {
-    display: flex;
-    flex-direction: row;
-    background-color:#131921;
+header{
+    background-color: rgba(19, 25, 33);
     width: 100%;
     height: 60px;
-}
-.barra {
-    width: 100%;
-    height: 39px;
-    background-color: #232f3e;
-}
-.icon,.letra {
-    color: white;
-}
-.logo {
-    background-image: url(../img/amazon.png);
-    background-size: cover;
-    width: 130px;
-    height: 50px;
-}
-.ubicacion {
-    font-size: 0.8em;
-    justify-content: center;
-    width: 150px;
-    color: #CCCCCC;
-}
-.icono-ubicacion {
-    font-size: 20px;
-    float: left;
-    margin: 8px;
-    grid-area: icono-ubicacion;
-}
-.enviar {
-    margin-top: 10px;
-    grid-area: enviar;
-}
-.pais {
-    grid-area: pais;
-}/* contenedor donde esta lo de busqueda */
-
-.header-search-input-focus {
-    border: 1px solid #FEBD69; /* Cambia el color del borde al hacer clic */
-    background-color: #fcfcfc; /* Cambia el color de fondo al hacer clic */
-}
-
-.header-search-input-no-focus {
-    border: 1px solid #E6E6E6; /* Cambia el color del borde cuando no se hace clic */
-    background-color: #FFFFFF; /* Cambia el color de fondo cuando no se hace clic */
-}
-
-.content-busqueda {
-    width: calc(100% - 594px);
-    margin: 10px 0 ;
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-}
-select, .input_buscador,.icon-busqueda {
-    height: 100%;
-    border: none;
-}
-select {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: 65px;
-    background-color: #E6E6E6;
-}
-.input_buscador {
-    outline: none;
-    width: calc(100% - 110px);
-}
-.icon-busqueda {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #FEBD69;
-    width: 45px;
-}
-.search {
-    font-size: 21px;
-}/* so far */
-
-.idioma {
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    width: 71.3px;
-}
-.bandera,.lengua {
-    padding-right: 3px;
-    padding-top: 28px;
-    width: 20px;
-    height: 14px;
-}
-.lengua {
-    color: white;
-}/* so far */
-.hola {
-    height: 60px;
-    width: 131px;
-}
-.saludo,.cuenta {
-    color: white;
-    font-size: 0.8em;
-}
-.saludo {
-    padding-top: 16px;
-    color: white;
-}/* so far */
-.reembolso {
-    height: 60px;
-    width: 77px;
-}
-.orden,.retornar{
-    color: white;
-    font-size: 0.8em;
-}
-.retornar {
-    padding-top: 16px;
-    color: white;
-}
-.carrito {
-    display: flex;
-    height: 60px;
-    width: 90px;
-}
-.i-carrito {
-    height: 30px;
-    width: 24px;
-    margin-top: 20px;
-}
-.l-carrito {
-    font-size: 0.8em;
-    margin-top: 26px;
-}/* so far  */
-.c-menu {
-    margin-left: 8px;
-    display: flex;
-    height: 35px;
-    width: 78px;
-}
-.i-hambu {
-    height: 17px;
-    width: 20px;
-    margin: 10px 0 0 10px;
-}
-.t-todo {
-    font-size: 0.8em;
-    margin-top: 10px;
-}/* so far  */
-
-.main-content {
-    height: 100vh;
-    position: static;
-    z-index: 10;
-}/* so far  */
-.ofert {
-    width: 140px;
-    height: 30px;
-}
-.t-oferta {
-    font-size: 0.8em;
-    margin-top: 10px;
-}/* so far  */
-
-.box-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0,0, 0,.5);
-    z-index: 10;
-}
-.modal {
-    width: 95%;
-    height: 75%;
-    z-index: 20;
-    background-color: white;
-    border-radius: 15px;
-    position: relative;
     display: grid;
-    grid-template: "box-main-img-modal info-modal" /
-                          1fr             350px;
+    grid-template: "header-logo header-enviar-a box-header-search-input header-flag-country header-identificate header-devoluciones header-carrito" 60px /
+                    150px       180px           1fr                     70px                  160px             120px               140px;
 }
-.btn-close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 1.4em;
-    border: 2px solid rgb(81, 185, 246,0.3);
-    border-radius: 6px;
-    padding: 1px 4px;
-    line-height: 1.1em;
+.header-logo{
+    grid-area: header-logo;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 70px;
 }
-.box-main-img-modal {
-    grid-area: box-main-img-modal;
-    width: 100%;
-    height: 100%;
+.img-main-logo{
+    width: 90%;
+    color: white;
+    padding-left: 15px;
+}
+.header-enviar-a{
+  grid-area: header-enviar-a;
+  display: grid;
+  grid-template: "box-icon-location box-texto-enviar-a"
+                  "box-icon-location box-texto-colombia" /
+                   20px               70px;
+}
+.box-icon-location{
+  height: 60px;
+  grid-area: box-icon-location;
+  color: white;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+.icon-location{
+  font-size: .9em;
+}
+.box-texto-enviar-a{
+  grid-area: box-texto-enviar-a;
+  color: white;
+  position: relative;
+  top: 15px;
+  font-size: .7em;
+  font-weight: 300;
+}
+.box-texto-colombia{
+    grid-area: box-texto-colombia;
+    font-size: .9em;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    bottom: -1px;
+}
+.box-header-search-input{
+    grid-area: box-header-search-input;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.img-modal {
-    width: 30%;
-    height:auto;
+.header-search-input{
+  height: 40px;
+  width: 100%;
+  display: grid;
+  grid-template: "box-filtro-todos box-buscar-amazon box-lupa" /
+                  70px              1fr               50px;
 }
-.info-modal {
-    grid-template: info-modal;
-    padding: /* arriba */50px /*  derecha*/ 75px /* abajo */ 100px /* izquierda */ 20px ;
-}/* so far  */
+.box-filtro-todos{
+  grid-area: box-filtro-todos;
+  background-color: #DCDCDC;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.filtro-todos{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.header-todos{
+  padding: 0 4px 0 15px;
+  font-size: .7em;
+}
+.icon-chevron{
+  font-size: .7em;
+}
+.box-buscar-amazon{
+  grid-area: box-buscar-amazon;
+  background-color: white;
+  width: 100%;
+}
+.input-busqueda{
+  border: none;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1.1em;
+}
+.box-lupa{
+  height: 40px;
+  background-color: orange;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lupa{
+  grid-area: lupa;
+}
+.icon-lupa{
+  font-size: 1.1em;
+}
+.header-flag-country{
+    grid-area: header-flag-country;
+}
+.box-flag{
+  display: flex;
+  justify-content: center;
+  margin-left: 65px;
+  margin-top: 20px;
+}
+.idioma{
+  color: white;
+  font-weight: 600;
+  font-size: .9em;
+  padding: 0 2px 0 3px;
+}
+.icon-chevron-idioma{
+  color: white;
+  font-size: .7em;
+  position: relative;
+  top: 3px;
+}
+.flag-usa{
+  width: 30px;
+}
+.header-identificate{
+    grid-area: header-identificate;
+}
+.txt-hola-identificate{
+  color: white;
+  font-size: .7em;
+  position: relative;
+  top: 5px;
+  margin-left: 40px;
+}
+.txt-cuenta-listas{
+  color: white;
+  font-size: .9em;
+  font-weight: 600;
+  position: relative;
+  margin-left: 40px;
+}
+.icon-chevron-identificate{
+  color: red;
+  font-size: .7em;
+  position: relative;
+  top: 3px;
+}
+.header-devoluciones{
+    grid-area: header-devoluciones;
+}
+.txt-devoluciones{
+  color: white;
+  font-size: .7em;
+  position: relative;
+  top: 5px;
+  margin-left: 40px;
+}
+.txt-pedidos{
+  color: white;
+  font-size: .9em;
+  font-weight: 600;
+  position: relative;
+  margin-left: 40px;
+}
+.header-carrito{
+  grid-area: header-carrito;
+}
+.box-carrito{
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+}
+.icon-carrito{
+  color: white;
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+.txt-carrito{
+  color: white;
+  font-size: .9em;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  margin-top: 15px;
+}
+.barra-navegacion{
+  width: 100%;
+  background-color: rgba(35, 47, 62);
+  height: 40px;
+}
+.items-menu{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+  margin-left: 10px;
+  line-height: 40px;
+}
+.menu-hamburguesa{
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+.items{
+  color: white;
+  margin-left: 20px;
+  font-size: .8em;
+  cursor: pointer;
+}
 
-.divs {
-    grid-template-columns: repeat(4,70px);
-    grid-template-rows: repeat(2,70px);
+
+.contenedor{
+  height: 100vh;
+  position: static;
+  z-index: 10;
+}
+main{
+  display: none;
+}
+main.visible{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0,.5);
+  z-index: 10;
+}
+.modal{
+  width: 97%;
+  height: 80%;
+  z-index: 20;
+  background-color: white;
+  border-radius: 10px;
+}
+.main-content{
+  width: 90%;
+  display: grid;
+  grid-template: "img-product  box-all box-close" /
+                  4fr           1fr     50px;
+}
+.img-product{
+  grid-area: img-product;
+}
+.box-img-principal{
+  display: flex;
+}
+.img-principal{
+  width: 450px;
+  height: 450px;
+  margin-left: 400px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.info-product{
+  grid-area: info-product;
+}
+.box-all{
+  /* grid-area: box-all;
+  display: flex;
+  flex-direction: column; */
+  height: 100vh;
+  position: static;
+  z-index: 10;
+}
+.box-text-product{
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 275px;
+  margin-top: 35px;
+  font-size: 1.1em;
+  
+}
+.imagenes{
+  
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: 60px 60px;
+  /* margin-left: 340px;
+  margin-top: 5px;
+  display: grid; */
+margin-top: 20px;
     position: absolute;
     top: 200px;
-    right: 30px;
+    right: 70px;
     display: grid;
-    width: 300px;
+    width: 290px;
     height: 50px;
+}
+.img-reducidas{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 3px;
+  border: 2px solid #b9b9b9;
+  cursor: pointer;
+}
+.active{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  padding: 3px;
+  border: 2px solid rgba(255, 143, 0);
+  cursor: pointer;
+}
+.img-2{
+  left: -100%;
+}
+.img-reducidas:hover{
+  border: 2px solid rgba(0, 75, 145);
+}
+.box-close{
+  grid-area: box-close;
+}
+.box-icon-close{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  margin-left: 26px;
+  margin-top: 6px;
+  border: 3px solid rgba(200, 243, 250);
+  border-radius: 9px;
+}
+.icon-close{
+  font-size: 1.3em;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.icon-close:hover{
+  color: gray;
 }
 
-.divMiniaturas {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #d5dbdb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.infoProductoTop{
+  display: grid;
+  grid-template: "imgProductoTop  txtProductoTop  calificaciones  precio  prime"/
+                    100px              800px             130px      70px    70px;
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid #cccccc;
+  justify-content: center;
+  background-color: #f0f0f0;
 }
-.divMiniaturas:hover {
-    cursor: pointer;
-    border: 2px solid #910044;
+.infoProductoTop2{
+  display: none;
 }
-.balon {
-    width: 41px;
-    height: 41px;
+.imgProductoTop{
+  grid-area: imgProductoTop;
 }
-.selected {
-    border: 2px solid #ff8f00;
+.img{
+  display: flex;
+  margin-left: 30px;
+}
+.imgTop{
+  display: flex;
+  width: 50px;
+}
+.txtProductoTop{
+  grid-area: txtProductoTop;
+  display: flex;
+  align-items: center;
+}
+.txt{
+  font-size: .8em;
+  font-weight: 600;
+}
+.calificaciones{
+  grid-area: calificaciones;
+  display: flex;
+  align-items: center;
+}
+.estrellas{
+  display: flex;
+}
+.start{
+  color: orange;
+  font-size: .9em;
+}
+.unidadCalificaciones{
+  font-size: .7em;
+}
+.precio{
+  grid-area: precio;
+  display: flex;
+  align-items: center;
+}
+.peso{
+  font-size: .8em;
+}
+.precioOfi{
+  font-size: 1.5em;
+  color: #A52A2A;
+  font-weight: 500;
+}
+.precioPeque{
+  font-size: .8em;
+  color: #A52A2A;
+}
+.prime{
+  grid-area: prime;
+  display: flex;
+  align-items: center;
+}
+.icon-prime{
+  font-size: .7em;
+  color: goldenrod;
+}
+.txtPrime{
+  font-size: .8em;
+  font-weight: 600;
+  color: rgb(0, 162, 255);
+}
+.volverPatrocinador{
+  display: flex;
+  justify-content: space-between;
+}
+.volver{
+  margin-left: 215px;
+  margin-top: 10px;
+}
+.chevron-left{
+  font-size: .4em;
+}
+.volverResult{
+  font-size: .7em;
+  cursor: pointer;
+}
+.patro{
+  font-size: .7em;
+}
+.exclaim{
+  font-size: .7em;
+  color: GRAY;
+}
+
+
+.contenedor{
+  display: grid;
+  grid-template: "imagenesPeque   producto    iconChevronTop    text-all    box-info" /
+                    270px          425px         48px              650px       200px;
+}
+.contenedor2{
+  display: none;
+}
+.imagenesPeque{
+  grid-area: imagenesPeque;
+}
+.imags{
+  display: flex;
+  flex-direction: column;
+  margin-left: 210px;
+  margin-top: 15px;
+}
+.imagesReducidas{
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  padding: 3px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.imagesReducidas:hover{
+  box-shadow: 0px 1px 5px 1px  rgb(93, 173, 250);
+}
+.imgActive{
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  padding: 3px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px 1px  rgb(93, 173, 250);
+}
+.producto{
+  grid-area: producto;
+  text-align: center;
+}
+.img-producto{
+  width: 500px;
+  max-width: 460px;
+}
+.iconChevronTop{
+  grid-area: iconChevronTop;
+}
+.iconArriba{
+  margin-top: 37px;
+  font-size: 1.2em;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.text-all{
+  grid-area: text-all;
+}
+.textComputer{
+  font-size: 1.4em;
+  margin-top: 20px;
+  font-weight: 500;
+}
+.visitas{
+  color: rgb(0, 113, 165);
+  font-size: .8em;
+}
+.visitas:hover{
+  color: rgb(204, 111, 70);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.caliRespuesta{
+  display: grid;
+  grid-template: "boxCali  boxEstrellas   boxIcon   boxTxtCali  boxBarra  boxRespuesta" /
+                    30px      90px          30px        115px      15px;
+  align-items: center;
+}
+.boxVisitas{
+  grid-area: boxVisitas;
+}
+.boxCali{
+  grid-area: boxCali;
+}
+.boxEstrellas{
+  grid-area: boxEstrellas;
+}
+.boxIcon{
+  grid-area: boxIcon;
+}
+.iconChevronCali{
+  font-size: .7em;
+}
+.boxTxtCali{
+  grid-area: boxTxtCali;
+}
+.txtCaliRespuesta{
+  font-size: .8em;
+  color: rgb(0, 113, 165);
+}
+.txtCaliRespuesta:hover{
+  color: rgb(204, 111, 70);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.boxBarra{
+  grid-area: boxBarra;
+}
+.boxRespuesta{
+  grid-area: boxRespuesta;
+}
+.box-info{
+  grid-area: box-info;
+  align-items: start;
+}
+.precioInfo{
+  display: flex;
+  align-items: center;
+}
+.box{
+  margin-left: 1px;
+  margin-top: 23px;
+  border: 1px solid #DCDCDC;
+  padding: 15px;
+  width: 240px;
+  border-radius: 10px;
+  left: 100px;
+}
+.us{
+  font-size: .8em;
+}
+.preci{
+  font-size: 1.6em;
+  font-weight: 500;
+}
+.preciPeque{
+  font-size: .8em;
+}
+.txtGeneralInfo{
+  margin-top: 15px;
+  font-size: .8em;
+  color: rgb(92, 92, 92);
+  width: 200px;
+}
+.detalles{
+  color: rgb(2, 118, 185);
+  font-weight: 500;
+}
+.detalles:hover{
+  color: rgb(204, 111, 70);
+  cursor: pointer;
+}
+.iconDetalles{
+  font-size: .7em;
+  color: gray;
+}
+.entrega{
+  font-weight: 600;
+  color: #000;
+}
+.time{
+  color: rgb(3, 172, 3);
+  font-weight: 600;
+}
+.envios{
+  margin-top: 10px;
+}
+.locationEnvios{
+  font-size: .8em;
+}
+.enviar-a{
+  font-size: .7em;
+  color: rgb(2, 118, 185);
+  font-weight: 600;
+}
+.enviar-a:hover{
+  color: rgb(204, 111, 70);
+  cursor: pointer;
+}
+.disponible{
+  margin-top: 10px;
+  color: rgb(2, 139, 2);
+}
+.cantidad{
+  border: 1px solid gray;
+  width: 85px;
+  height: 20px;
+  background-color: #e7e7e7;
+  border-radius: 20PX;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.cantidadPro{
+  font-size: .6em;
+}
+.iconCantidad{
+  font-size: .7em;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.buttons{
+  margin-top: 10px;
+}
+.button-1{
+  width: 200px;
+  height: 30px;
+  background-color: rgb(255, 216, 20);
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.button-2{
+  width: 200px;
+  height: 30px;
+  background-color: rgb(255, 164, 28);
+  border: none;
+  border-radius: 20px;
+}
+
+.filtro{
+  display: flex;
+  justify-content: space-between;
+  height: 37px;
+  border-bottom: 1px solid #DCDCDC;
+  box-shadow: 0px 1px 5px gray;
+  align-items: center;
+  font-size: .8em;
+}
+.txtFiltro{
+  margin-left: 60px;
+}
+.pc{
+  color: rgb(200, 85, 0);
+  font-weight: 600;
+}
+.iconFiltro{
+  border: 1px solid gray;
+  width: 150px;
+  height: 20px;
+  background-color: #ebe9e9;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: .8em;
+  margin-right: 60px;
+}
+
+.mainContent{
+  display: grid;
+  grid-template: "clasificar    boxImgProducto    txtProductoPrincipal"/
+                    320px         350px             870px;
+}
+.mainContent2{
+  display: none;
+}
+.clasificar{
+  grid-area: clasificar;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.txtFil{
+  font-weight: 600;
+  font-size: .9em;
+}
+.txtPrincipalAll{
+  font-size: .9em;
+}
+hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.txtPrincipalBold{
+  font-size: .9em;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.mas{
+  font-size: .7em;
+}
+.boxImgProducto{
+  grid-area: boxImgProducto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 65px;
+}
+.txtResult{
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.imgProducto{
+  width: 150px;
+}
+.imgPri{
+  width: 250px;
+  cursor: pointer;
+}
+.txtProductoPrincipal{
+  grid-area: txtProductoPrincipal;
+  margin-top: 80px;
+}
+.spanTxt{
+  font-size: 1.1em;
+}
+/* poppins-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  
+  /* poppins-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/poppins-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-700italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/poppins-v20-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/poppins-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
